@@ -1,27 +1,62 @@
-# Pure-TS-Template project
-This is a Pure-TS-Template simulator built with Node.js and TypeScript.
+# Pure-TS-Template
+
+## Overview
+Pure-TS-Template is a robust and ready-to-use template for starting new projects with a powerful tech stack. It includes pre-installed configurations for Node.js, TypeScript, DotEnv, Express, Jest, Babel, and Mocha, providing a comprehensive setup for both JavaScript and TypeScript development and testing.
 
 ## Features
-- Note creation: Allows you to create notes with a title, content and tags;
-- **Links between Notes**: Link notes to each other to create a network of information;
-- Search and Filters**: Search and filter notes by title, content or tags; *(New Feature)*;
-- Visualization of Connections**: Visualize how notes are connected;
-- History and Versioning**: Keep a history of changes to notes.
+- **Node.js**: Server-side JavaScript runtime environment.
+- **TypeScript**: Strongly typed programming language that builds on JavaScript.
+- **DotEnv**: Environment variable management.
+- **Express**: Minimalist web framework for Node.js.
+- **Jest**: Testing framework for TypeScript code.
+- **Babel**: Compiler for JavaScript code, specifically for testing.
+- **Mocha**: Testing framework, used in combination with Babel for JavaScript tests.
 
-## Installation
-1. Clone the repository: 
-  ```bash
-  git clone <URL-do-repositorio>
-  ```
+## Getting Started
+Follow these instructions to get your development environment set up.
+
+### Prerequisites
+Ensure you have Node.js and npm installed on your machine.
+
+### Installation
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/jlss14-ifal/Pure-TS-Template.git
 2. Install the dependencies:
 ```bash
 npm install
 ```
+
 ## Use
 Start the server:
 ```bash
 npm start
 ```
+
+## Available Scripts
+
+In the project directory, you can run the following scripts:
+
+### Build Scripts
+- **`npm run build:src`**: Compiles the TypeScript files in the `src` directory into JavaScript using Babel and outputs them to the `dist/src` directory.
+- **`npm run build:test`**: Compiles the TypeScript test files in the `test` directory into JavaScript using Babel and outputs them to the `dist/test` directory.
+- **`npm run build:rename`**: Renames the compiled `.js` files to `.mjs` in the `dist` directory for compatibility with ES module syntax.
+- **`npm run build:fix-imports`**: Compiles the `scripts/fix-imports.ts` script into JavaScript and executes it to fix import statements in the compiled `.mjs` files.
+- **`npm run build`**: Runs the `build:src`, `build:test`, `build:rename`, and `build:fix-imports` scripts sequentially to perform a full build.
+
+### Start Scripts
+- **`npm start`**: Executes the application from the `dist/src/index.mjs` file.
+- **`npm run dev`**: Starts the development server using `ts-node` with the `src/index.ts` file.
+- **`npm run startdev`**: Compiles the TypeScript files and starts the application from the `dist/src/index.mjs` file.
+
+### Test Scripts
+- **`npm run test:ts`**: Runs all the TypeScript tests using Jest.
+- **`npm run test:js`**: Runs all the compiled JavaScript tests in the `dist/test` directory using Mocha.
+- **`npm test`**: Executes the `test:ts`, `build`, and `test:js` scripts sequentially to perform a full test cycle.
+- **`npm run test:watch`**: Runs Jest in watch mode, re-running tests when files change.
+
+These scripts provide a streamlined workflow for building, starting, and testing your project.
+
 
 ## Commands Used
 

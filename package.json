@@ -1,6 +1,6 @@
 {
   "type": "module",
-  "name": "Pure-TS-Template",
+  "name": "pure_ts_template",
   "version": "1.0.0",
   "description": "This is an experiment on the how to create Pure-TS-Template",
   "main": "index.js",
