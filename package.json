@@ -11,6 +11,7 @@
     "build:fix-imports": "babel scripts/fix-imports.ts > ./scripts/fix-imports.js && node scripts/fix-imports.js",
     "build": "npm run build:src && npm run build:test && npm run build:rename && npm run build:fix-imports",
     "start": "node dist/src/index.mjs",
+    "start:prod": "node dist/index.mjs",
     "dev": "ts-node src/index.ts",
     "startdev": "tsc && node dist/src/index.mjs",
     "test:ts": "jest",
