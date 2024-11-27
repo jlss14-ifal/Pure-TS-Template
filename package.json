@@ -17,7 +17,9 @@
     "test:ts": "jest",
     "test:js": "mocha dist/test/**/*.mjs",
     "test": "npm run test:ts && npm run build && npm run test:js",
-    "test:watch": "jest --watch"
+    "test:ts:watch": "jest --watch",
+    "test:js:watch": "npm run build && mocha dist/test/**/*.mjs --watch",
+    "test:watch": "npm run test:ts:watch && npm run test:js:watch"
   },
   "author": "Author",
   "license": "MIT",
